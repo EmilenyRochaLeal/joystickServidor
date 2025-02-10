@@ -1,4 +1,5 @@
 // Desenvolvido por prof. Jivago
+// Data: 2025
 #include <stdio.h>        // Biblioteca padrão de entrada e saída
 #include "hardware/adc.h" // Biblioteca para manipulação do ADC no RP2040
 #include "pico/stdlib.h"  // Biblioteca padrão do Raspberry Pi Pico
