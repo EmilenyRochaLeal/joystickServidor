@@ -9,6 +9,11 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "wifi.h"
+#include "joystick.h"
+#include "queue.h" 
+
+extern xQueueHandle xJoystickQueue;
+
 
 #define WIFI_SSID "MAMBEE"
 #define WIFI_PASSWORD "1fp1mamb33"
@@ -27,11 +32,19 @@ static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
 
     printf("Request: %s\n", request);
 
+    JoystickData dados_joystick;
+    bool dados = xQueuePeek(xJoystickQueue, &dados_joystick, 0);  // Lê sem remover
+
     char html[1024];
     snprintf(html, sizeof(html),
         "HTTP/1.1 200 OK\r\n"
         "Content-Type: text/html\r\n\r\n"
-        "<!DOCTYPE html><html><head><title>Hello</title></head><body><h1>Hello World!</h1></body></html>"
+        "<!DOCTYPE html><html><head><title>Dados x, y e botao</title></head><body>"
+        "<h1>Dados Joystick</h1>"
+        "</body></html>",
+        dados ? dados_joystick.x : -1,
+        dados ? dados_joystick.y : -1,
+        dados ? (dados_joystick.button ? "Pressionado" : "Solto") : "Sem dados"
     );
 
     tcp_write(tpcb, html, strlen(html), TCP_WRITE_FLAG_COPY);

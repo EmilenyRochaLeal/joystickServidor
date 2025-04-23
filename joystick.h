@@ -3,4 +3,10 @@
 
 void joystick_task(void *params);
 
+typedef struct {
+    uint16_t x;
+    uint16_t y;
+    bool button;
+} JoystickData;
+
 #endif
