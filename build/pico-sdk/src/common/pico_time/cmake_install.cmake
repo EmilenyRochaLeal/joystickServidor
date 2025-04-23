@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Jonat/.pico-sdk/sdk/1.5.1/src/common/pico_time
+# Install script for directory: /home/emileny/.pico-sdk/sdk/1.5.1/src/common/pico_time
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/pico-projects")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/Jonat/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-objdump.exe")
+  set(CMAKE_OBJDUMP "/home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-objdump")
 endif()
 
