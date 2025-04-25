@@ -12,7 +12,8 @@
 #include "joystick.h"
 #include "queue.h" 
 
-extern xQueueHandle xJoystickQueue;
+// extern xQueueHandle xJoystickQueue;
+extern QueueHandle_t xJoystickQueue;
 
 
 #define WIFI_SSID "MAMBEE"
@@ -33,23 +34,27 @@ static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
     printf("Request: %s\n", request);
 
     JoystickData dados_joystick;
-    bool dados = xQueuePeek(xJoystickQueue, &dados_joystick, 0);  // Lê sem remover
+    bool tem_dados = xQueuePeek(xJoystickQueue, &dados_joystick, 0);  // Lê sem remover
 
     char html[1024];
     snprintf(html, sizeof(html),
         "HTTP/1.1 200 OK\r\n"
         "Content-Type: text/html\r\n\r\n"
-        "<!DOCTYPE html><html><head><title>Dados x, y e botao</title></head><body>"
-        "<h1>Dados Joystick</h1>"
+        "<html><head><meta http-equiv='refresh' content='1'>"
+        "<title>Joystick</title></head><body>"
+        "<h1>Dados do Joystick</h1>"
+        "<p>X: %d</p><p>Y: %d</p><p>Botão: %s</p>"
         "</body></html>",
-        dados ? dados_joystick.x : -1,
-        dados ? dados_joystick.y : -1,
-        dados ? (dados_joystick.button ? "Pressionado" : "Solto") : "Sem dados"
+        tem_dados ? dados_joystick.x : -1,
+        tem_dados ? dados_joystick.y : -1,
+        tem_dados ? (dados_joystick.button ? "Pressionado" : "Solto") : "Sem dados"
     );
 
+    // Envia para o cliente
     tcp_write(tpcb, html, strlen(html), TCP_WRITE_FLAG_COPY);
     tcp_output(tpcb);
 
+    // libera a memória
     free(request);
     pbuf_free(p);
     return ERR_OK;

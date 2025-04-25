@@ -11,7 +11,8 @@
 #define vRy_PIN 27 // Pino ligado ao eixo Y (ADC1)
 #define SW 22 // Pino do botão (Digital)
 
-extern xQueueHandle xJoystickQueue;
+// extern xQueueHandle xJoystickQueue;
+extern QueueHandle_t xJoystickQueue;
 
 void joystick_task(void *params) {
     adc_init();

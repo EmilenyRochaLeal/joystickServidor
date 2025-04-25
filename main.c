@@ -20,7 +20,7 @@ int main() {
         printf("Erro ao criar fila do joystick!\n");
     }
 
-    BaseType_t result = xTaskCreate(wifi_task, "WiFiTask", 2048, NULL, 2, NULL);
+    BaseType_t result = xTaskCreate(wifi_task, "WiFiTask", 4096, NULL, 2, NULL);
     if (result != pdPASS) {
         printf("[Main] Falha ao criar a wifi_task! Código: %ld\n", result);
     }
