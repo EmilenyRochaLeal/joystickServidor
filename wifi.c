@@ -19,6 +19,31 @@ extern QueueHandle_t xJoystickQueue;
 #define WIFI_SSID "MAMBEE"
 #define WIFI_PASSWORD "1fp1mamb33"
 
+// HTML da página principal (com JavaScript dinâmico)
+static const char *pagina_html =
+        "HTTP/1.1 200 OK\r\n"
+        "Content-Type: text/html\r\n\r\n"
+        "<!DOCTYPE html><html><head><title>Joystick</title>"
+        "<script>"
+        "async function atualizarDados() {"
+        "try {"
+        "const res = await fetch('/data');"
+        "const json = await res.json();"
+        "document.getElementById('x').textContent = json.x;"
+        "document.getElementById('y').textContent = json.y;"
+        "document.getElementById('botao').textContent = json.botao;"
+        "document.getElementById('direcao').textContent = json.direcao;"
+        "} catch (e) { console.log('Erro:', e); }"
+        "}"
+        "setInterval(atualizarDados, 1000);"
+        "</script></head><body>"
+        "<h1>Joystick</h1>"
+        "<p>X: <span id='x'>-</span></p>"
+        "<p>Y: <span id='y'>-</span></p>"
+        "<p>Botão: <span id='botao'>-</span></p>"
+        "<p>Direção: <span id='direcao'>-</span></p>"
+        "</body></html>";
+
 // Callback de recebimento HTTP
 static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err) {
     if (!p) {
@@ -36,22 +61,27 @@ static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
     JoystickData dados_joystick;
     bool tem_dados = xQueuePeek(xJoystickQueue, &dados_joystick, 0);  // Lê sem remover
 
-    char html[1024];
-    snprintf(html, sizeof(html),
-        "HTTP/1.1 200 OK\r\n"
-        "Content-Type: text/html\r\n\r\n"
-        "<html><head><meta http-equiv='refresh' content='1'>"
-        "<title>Joystick</title></head><body>"
-        "<h1>Dados do Joystick</h1>"
-        "<p>X: %d</p><p>Y: %d</p><p>Botão: %s</p>"
-        "</body></html>",
-        tem_dados ? dados_joystick.x : -1,
-        tem_dados ? dados_joystick.y : -1,
-        tem_dados ? (dados_joystick.button ? "Pressionado" : "Solto") : "Sem dados"
-    );
+    if (strncmp(request, "GET /", 9) == 0) {
+        // Responder com JSON
+        char resposta[256];
+        snprintf(resposta, sizeof(resposta),
+            "HTTP/1.1 200 OK\r\n"
+            "Content-Type: application/json\r\n\r\n"
+            "{\"x\": %d, \"y\": %d, \"botao\": \"%s\", \"direcao\": \"%s\"}",
+            tem_dados ? dados_joystick.x : -1,
+            tem_dados ? dados_joystick.y : -1,
+            tem_dados ? (dados_joystick.button ? "Pressionado" : "Solto") : "Desconhecido",
+            tem_dados ? dados_joystick.direcao : "Sem dados"
+        );
+        tcp_write(tpcb, resposta, strlen(resposta), TCP_WRITE_FLAG_COPY);
+    } else {
+        // Responder com a página HTML
+        tcp_write(tpcb, pagina_html, strlen(pagina_html), TCP_WRITE_FLAG_COPY);
+    }
+
+    
 
     // Envia para o cliente
-    tcp_write(tpcb, html, strlen(html), TCP_WRITE_FLAG_COPY);
     tcp_output(tpcb);
 
     // libera a memória
@@ -66,40 +96,46 @@ static err_t tcp_server_accept(void *arg, struct tcp_pcb *newpcb, err_t err) {
     return ERR_OK;
 }
 
-// Função para a tarefa FreeRTOS
 void wifi_task(void *params) {
     printf("[WiFi Task] Iniciando tarefa\n");
 
-    // Inicializa a arquitetura Wi-Fi
     if (cyw43_arch_init()) {
         printf("[WiFi Task] Erro ao iniciar Wi-Fi\n");
         vTaskDelete(NULL);
     }
+
+    sleep_ms(1000); // Mais tempo para garantir estabilidade
     printf("[WiFi Task] Wi-Fi iniciado com sucesso\n");
 
-    // Habilita modo Station (cliente)
     cyw43_arch_enable_sta_mode();
     printf("[WiFi Task] Modo STA habilitado\n");
 
-    // Conecta à rede
-    int result = cyw43_arch_wifi_connect_timeout_ms(
-        WIFI_SSID, WIFI_PASSWORD, CYW43_AUTH_WPA2_AES_PSK, 30000);
+    const int max_retries = 5;
+    int result = -1;
+    for (int i = 0; i < max_retries; i++) {
+        printf("[WiFi Task] Tentando conectar (%d/%d)...\n", i + 1, max_retries);
+        result = cyw43_arch_wifi_connect_timeout_ms(
+            WIFI_SSID, WIFI_PASSWORD, CYW43_AUTH_WPA2_AES_PSK, 15000);
+        if (result == 0) {
+            printf("[WiFi Task] Conectado com sucesso!\n");
+            break;
+        } else {
+            printf("[WiFi Task] Falha ao conectar (tentativa %d). Código: %d\n", i + 1, result);
+            vTaskDelay(pdMS_TO_TICKS(2000)); // Espera 2s e tenta de novo
+        }
+    }
 
     if (result != 0) {
-        printf("[WiFi Task] Falha ao conectar. Código: %d\n", result);
+        printf("[WiFi Task] Não foi possível conectar após %d tentativas. Finalizando task.\n", max_retries);
         vTaskDelete(NULL);
     }
 
-    printf("[WiFi Task] Conectado com sucesso\n");
-
-    // Mostra IP atribuído
     if (netif_default) {
         printf("[WiFi Task] IP: %s\n", ipaddr_ntoa(&netif_default->ip_addr));
     } else {
         printf("[WiFi Task] netif_default é NULL! IP não atribuído.\n");
     }
 
-    // Inicia servidor HTTP
     struct tcp_pcb *server = tcp_new();
     if (!server || tcp_bind(server, IP_ADDR_ANY, 80) != ERR_OK) {
         printf("[WiFi Task] Erro ao iniciar servidor HTTP\n");
@@ -110,7 +146,6 @@ void wifi_task(void *params) {
     tcp_accept(server, tcp_server_accept);
     printf("[WiFi Task] Servidor HTTP ouvindo na porta 80\n");
 
-    // Loop principal da task
     while (1) {
         cyw43_arch_poll();  // Mantém Wi-Fi ativo
         vTaskDelay(pdMS_TO_TICKS(100));

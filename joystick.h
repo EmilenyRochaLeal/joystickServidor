@@ -7,6 +7,7 @@ typedef struct {
     uint16_t x;
     uint16_t y;
     bool button;
+    char direcao[16];
 } JoystickData;
 
 #endif
