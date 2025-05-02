@@ -27,7 +27,7 @@ static const char *pagina_html =
         "<script>"
         "async function atualizarDados() {"
         "try {"
-        "const res = await fetch('/data');"
+        "const res = await fetch('/dados');"
         "const json = await res.json();"
         "document.getElementById('x').textContent = json.x;"
         "document.getElementById('y').textContent = json.y;"
@@ -61,7 +61,7 @@ static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
     JoystickData dados_joystick;
     bool tem_dados = xQueuePeek(xJoystickQueue, &dados_joystick, 0);  // Lê sem remover
 
-    if (strncmp(request, "GET /", 9) == 0) {
+    if (strncmp(request, "GET /dados", 10) == 0) {
         // Responder com JSON
         char resposta[256];
         snprintf(resposta, sizeof(resposta),
@@ -78,6 +78,7 @@ static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, er
         // Responder com a página HTML
         tcp_write(tpcb, pagina_html, strlen(pagina_html), TCP_WRITE_FLAG_COPY);
     }
+    
 
     
 

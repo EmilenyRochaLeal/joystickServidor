@@ -3,7 +3,7 @@ Archive member included to satisfy reference by file (symbol)
 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
                               CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj (__aeabi_idiv0)
 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strncmp.o)
-                              CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/def.c.obj (strncmp)
+                              CMakeFiles/joystick.dir/wifi.c.obj (strncmp)
 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-malloc.o)
                               CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.obj (malloc)
 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mallocr.o)
@@ -16,8 +16,6 @@ Archive member included to satisfy reference by file (symbol)
                               /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o (__libc_init_array)
 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sysconf.o)
                               /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mallocr.o) (sysconf)
-/home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strcmp.o)
-                              CMakeFiles/joystick.dir/wifi.c.obj (strcmp)
 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mlock.o)
                               /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mallocr.o) (__malloc_lock)
 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-atoi.o)
@@ -2300,9 +2298,9 @@ Discarded input sections
                 0x00000000       0x50 CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .text.vPortGetHeapStats
                 0x00000000       0x84 CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .text          0x00000000        0x0 /tmp/ccA52Gue.o
- .data          0x00000000        0x0 /tmp/ccA52Gue.o
- .bss           0x00000000        0x0 /tmp/ccA52Gue.o
+ .text          0x00000000        0x0 /tmp/ccPY9FxL.o
+ .data          0x00000000        0x0 /tmp/ccPY9FxL.o
+ .bss           0x00000000        0x0 /tmp/ccPY9FxL.o
  .data          0x00000000        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strncmp.o)
@@ -2331,8 +2329,6 @@ Discarded input sections
  .text          0x00000000        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sysconf.o)
  .data          0x00000000        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sysconf.o)
  .bss           0x00000000        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sysconf.o)
- .data          0x00000000        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strcmp.o)
- .bss           0x00000000        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strcmp.o)
  .text          0x00000000        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mlock.o)
  .data          0x00000000        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mlock.o)
  .bss           0x00000000        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mlock.o)
@@ -2575,11 +2571,11 @@ LOAD /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13
 .boot2          0x10000000      0x100
                 0x10000000                        __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 /tmp/ccA52Gue.o
+ .boot2         0x10000000      0x100 /tmp/ccPY9FxL.o
                 0x10000100                        __boot2_end__ = .
                 0x00000001                        ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100    0x1a1f8
+.text           0x10000100    0x1a170
                 0x10000100                        __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -4332,41 +4328,39 @@ LOAD /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13
                 0x10019c70                memmove
  .text.sysconf  0x10019d20       0x1c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sysconf.o)
                 0x10019d20                sysconf
- .text          0x10019d3c       0x88 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strcmp.o)
-                0x10019d3c                strcmp
  .text.__malloc_lock
-                0x10019dc4       0x10 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mlock.o)
-                0x10019dc4                __malloc_lock
+                0x10019d3c       0x10 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mlock.o)
+                0x10019d3c                __malloc_lock
  .text.__malloc_unlock
-                0x10019dd4       0x10 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mlock.o)
-                0x10019dd4                __malloc_unlock
- .text.calloc   0x10019de4       0x18 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-calloc.o)
-                0x10019de4                calloc
+                0x10019d4c       0x10 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mlock.o)
+                0x10019d4c                __malloc_unlock
+ .text.calloc   0x10019d5c       0x18 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-calloc.o)
+                0x10019d5c                calloc
  .text._calloc_r
-                0x10019dfc       0xa8 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-callocr.o)
-                0x10019dfc                _calloc_r
- .text.strlen   0x10019ea4       0x5c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strlen-stub.o)
-                0x10019ea4                strlen
+                0x10019d74       0xa8 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-callocr.o)
+                0x10019d74                _calloc_r
+ .text.strlen   0x10019e1c       0x5c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strlen-stub.o)
+                0x10019e1c                strlen
  .text._malloc_trim_r
-                0x10019f00       0xb4 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-freer.o)
-                0x10019f00                _malloc_trim_r
- .text._free_r  0x10019fb4      0x1d4 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-freer.o)
-                0x10019fb4                _free_r
- .text._sbrk_r  0x1001a188       0x24 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o)
-                0x1001a188                _sbrk_r
- .text.__errno  0x1001a1ac        0xc /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-errno.o)
-                0x1001a1ac                __errno
+                0x10019e78       0xb4 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-freer.o)
+                0x10019e78                _malloc_trim_r
+ .text._free_r  0x10019f2c      0x1d4 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-freer.o)
+                0x10019f2c                _free_r
+ .text._sbrk_r  0x1001a100       0x24 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o)
+                0x1001a100                _sbrk_r
+ .text.__errno  0x1001a124        0xc /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-errno.o)
+                0x1001a124                __errno
  .text.__retarget_lock_acquire_recursive
-                0x1001a1b8        0x4 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
-                0x1001a1b8                __retarget_lock_acquire_recursive
+                0x1001a130        0x4 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
+                0x1001a130                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x1001a1bc        0x4 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
-                0x1001a1bc                __retarget_lock_release_recursive
+                0x1001a134        0x4 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
+                0x1001a134                __retarget_lock_release_recursive
  *(.fini)
- .fini          0x1001a1c0        0x4 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crti.o
-                0x1001a1c0                _fini
- *fill*         0x1001a1c4        0x4 
- .fini.__stub   0x1001a1c8      0x130 linker stubs
+ .fini          0x1001a138        0x4 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crti.o
+                0x1001a138                _fini
+ *fill*         0x1001a13c        0x4 
+ .fini.__stub   0x1001a140      0x130 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -4378,435 +4372,436 @@ LOAD /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x1001a2f8        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x1001a2f8                        . = ALIGN (0x4)
+ .eh_frame      0x1001a270        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x1001a270                        . = ALIGN (0x4)
 
-.glue_7         0x1001a2f8        0x0
- .glue_7        0x1001a2f8        0x0 linker stubs
+.glue_7         0x1001a270        0x0
+ .glue_7        0x1001a270        0x0 linker stubs
 
-.glue_7t        0x1001a2f8        0x0
- .glue_7t       0x1001a2f8        0x0 linker stubs
+.glue_7t        0x1001a270        0x0
+ .glue_7t       0x1001a270        0x0 linker stubs
 
-.vfp11_veneer   0x1001a2f8        0x0
- .vfp11_veneer  0x1001a2f8        0x0 linker stubs
+.vfp11_veneer   0x1001a270        0x0
+ .vfp11_veneer  0x1001a270        0x0 linker stubs
 
-.v4_bx          0x1001a2f8        0x0
- .v4_bx         0x1001a2f8        0x0 linker stubs
+.v4_bx          0x1001a270        0x0
+ .v4_bx         0x1001a270        0x0 linker stubs
 
-.iplt           0x1001a2f8        0x0
- .iplt          0x1001a2f8        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x1001a270        0x0
+ .iplt          0x1001a270        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x1001a2f8    0x3a1d4
+.rodata         0x1001a270    0x3a1dc
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.calcula_direcao.str1.4
-                0x1001a2f8     0x2558 CMakeFiles/joystick.dir/joystick.c.obj
+                0x1001a270     0x255c CMakeFiles/joystick.dir/joystick.c.obj
                                  0x5b (size before relaxing)
  .rodata.joystick_task.str1.4
-                0x1001c850       0x3f CMakeFiles/joystick.dir/joystick.c.obj
+                0x1001c7cc       0x3f CMakeFiles/joystick.dir/joystick.c.obj
  .rodata.main.str1.4
-                0x1001c850       0x89 CMakeFiles/joystick.dir/main.c.obj
+                0x1001c7cc       0x89 CMakeFiles/joystick.dir/main.c.obj
  .rodata.tcp_server_recv.str1.4
-                0x1001c850      0x36b CMakeFiles/joystick.dir/wifi.c.obj
+                0x1001c7cc      0x370 CMakeFiles/joystick.dir/wifi.c.obj
  .rodata.wifi_task.str1.4
-                0x1001c850      0x222 CMakeFiles/joystick.dir/wifi.c.obj
+                0x1001c7cc      0x222 CMakeFiles/joystick.dir/wifi.c.obj
  .rodata.spin_lock_claim_unused.str1.4
-                0x1001c850       0x1b CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+                0x1001c7cc       0x1b CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
  .rodata.user_irq_claim_unused.str1.4
-                0x1001c850       0x1b CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x1001c7cc       0x1b CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1001c7cc        0x4 
  .rodata.at_the_end_of_time
-                0x1001c850        0x8 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x1001c850                at_the_end_of_time
+                0x1001c7d0        0x8 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1001c7d0                at_the_end_of_time
  .rodata.hardware_alarm_claim.str1.4
-                0x1001c858       0x22 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x1001c7d8       0x22 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.hardware_alarm_claim_unused.str1.4
-                0x1001c858       0x14 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x1001c7d8       0x14 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.panic.str1.4
-                0x1001c858       0x12 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x1001c7d8       0x12 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.panic_unsupported.str1.4
-                0x1001c858        0xe CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x1001c7d8        0xe CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.hard_assertion_failure.str1.4
-                0x1001c858        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x1001c7d8        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata._ftoa.str1.4
-                0x1001c858       0x15 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x1001c7d8       0x15 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .rodata._vsnprintf
-                0x1001c858      0x19c CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x1001c9f4        0x4 
+                0x1001c7d8      0x19c CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x1001c974        0x4 
  .rodata.pow10.0
-                0x1001c9f8       0x50 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x1001c978       0x50 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .rodata.missing_double_func_shim.str1.4
-                0x1001ca48       0x18 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x1001c9c8       0x18 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.missing_float_func_shim.str1.4
-                0x1001ca48        0x1 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x1001c9c8        0x1 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
  .rodata.__wrap_malloc.str1.4
-                0x1001ca48        0xe CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.obj
+                0x1001c9c8        0xe CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .rodata.str1.4
-                0x1001ca48       0x40 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1001c9c8       0x40 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x1001ca48        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1001c9c8        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x1001ca54        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1001c9d4        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x1001ca60        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1001c9e0        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x1001ca6c        0x2 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x1001ca6e        0x2 
+                0x1001c9ec        0x2 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x1001c9ee        0x2 
  .rodata._resetd_driver
-                0x1001ca70       0x18 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x1001c9f0       0x18 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.str1.4
-                0x1001ca88       0x13 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x1001ca08       0x13 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.__bi_182.0
-                0x1001ca88        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x1001ca08        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.str1.4
-                0x1001ca94       0x2a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1001ca14       0x2a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_str
-                0x1001ca94       0x18 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1001ca14       0x18 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_cfg
-                0x1001caac       0x54 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1001ca2c       0x54 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x1001cb00       0x12 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1001ca80       0x12 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.str1.4
-                0x1001cb12       0x14 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x1001ca92       0x14 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.str1.4
-                0x1001cb12       0x53 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x1001cb12        0x2 
+                0x1001ca92       0x53 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x1001ca92        0x2 
  .rodata.tud_task_ext
-                0x1001cb14       0x8c CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.obj
+                0x1001ca94       0x8c CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x1001cba0       0x18 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.obj
+                0x1001cb20       0x18 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.obj
  .rodata.dns_send.isra.0.str1.4
-                0x1001cbb8       0x18 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/dns.c.obj
+                0x1001cb38       0x18 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/dns.c.obj
  .rodata.dns_check_entry.str1.4
-                0x1001cbb8       0x3b CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/dns.c.obj
+                0x1001cb38       0x3b CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/dns.c.obj
  .rodata.mem_free.str1.4
-                0x1001cbb8       0xb6 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/mem.c.obj
+                0x1001cb38       0xb6 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/mem.c.obj
  .rodata.mem_trim.str1.4
-                0x1001cbb8       0x49 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/mem.c.obj
+                0x1001cb38       0x49 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/mem.c.obj
  .rodata.mem_malloc.str1.4
-                0x1001cbb8       0x5f CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/mem.c.obj
+                0x1001cb38       0x5f CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/mem.c.obj
  .rodata.memp_malloc_pool.str1.4
-                0x1001cbb8       0x37 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cb38       0x37 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
  .rodata.memp_free_pool.str1.4
-                0x1001cbb8       0x20 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cb38       0x20 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
  .rodata.memp_pools
-                0x1001cbb8       0x28 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
-                0x1001cbb8                memp_pools
+                0x1001cb38       0x28 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cb38                memp_pools
  .rodata.memp_PBUF_POOL
-                0x1001cbe0       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
-                0x1001cbe0                memp_PBUF_POOL
+                0x1001cb60       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cb60                memp_PBUF_POOL
  .rodata.memp_PBUF
-                0x1001cbf0       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
-                0x1001cbf0                memp_PBUF
+                0x1001cb70       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cb70                memp_PBUF
  .rodata.memp_SYS_TIMEOUT
-                0x1001cc00       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
-                0x1001cc00                memp_SYS_TIMEOUT
+                0x1001cb80       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cb80                memp_SYS_TIMEOUT
  .rodata.memp_FRAG_PBUF
-                0x1001cc10       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
-                0x1001cc10                memp_FRAG_PBUF
+                0x1001cb90       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cb90                memp_FRAG_PBUF
  .rodata.memp_REASSDATA
-                0x1001cc20       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
-                0x1001cc20                memp_REASSDATA
+                0x1001cba0       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cba0                memp_REASSDATA
  .rodata.memp_TCP_SEG
-                0x1001cc30       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
-                0x1001cc30                memp_TCP_SEG
+                0x1001cbb0       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cbb0                memp_TCP_SEG
  .rodata.memp_TCP_PCB_LISTEN
-                0x1001cc40       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
-                0x1001cc40                memp_TCP_PCB_LISTEN
+                0x1001cbc0       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cbc0                memp_TCP_PCB_LISTEN
  .rodata.memp_TCP_PCB
-                0x1001cc50       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
-                0x1001cc50                memp_TCP_PCB
+                0x1001cbd0       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cbd0                memp_TCP_PCB
  .rodata.memp_UDP_PCB
-                0x1001cc60       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
-                0x1001cc60                memp_UDP_PCB
+                0x1001cbe0       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cbe0                memp_UDP_PCB
  .rodata.memp_RAW_PCB
-                0x1001cc70       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
-                0x1001cc70                memp_RAW_PCB
+                0x1001cbf0       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/memp.c.obj
+                0x1001cbf0                memp_RAW_PCB
  .rodata.netif_add.str1.4
-                0x1001cc80       0x42 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/netif.c.obj
+                0x1001cc00       0x42 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/netif.c.obj
  .rodata.pbuf_free.part.0.str1.4
-                0x1001cc80       0x4e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
+                0x1001cc00       0x4e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
  .rodata.pbuf_alloc.str1.4
-                0x1001cc80       0x1b CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
+                0x1001cc00       0x1b CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
  .rodata.pbuf_realloc.str1.4
-                0x1001cc80       0x65 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
+                0x1001cc00       0x65 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
  .rodata.pbuf_add_header.str1.4
-                0x1001cc80        0xa CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
+                0x1001cc00        0xa CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
  .rodata.pbuf_ref.str1.4
-                0x1001cc80       0x12 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
+                0x1001cc00       0x12 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
  .rodata.pbuf_cat.str1.4
-                0x1001cc80       0x2d CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
+                0x1001cc00       0x2d CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
  .rodata.pbuf_copy_partial_pbuf.str1.4
-                0x1001cc80       0x33 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
+                0x1001cc00       0x33 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
  .rodata.pbuf_take.str1.4
-                0x1001cc80       0x2e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
+                0x1001cc00       0x2e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
  .rodata.pbuf_take_at.str1.4
-                0x1001cc80       0x17 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
+                0x1001cc00       0x17 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
  .rodata.pbuf_coalesce.str1.4
-                0x1001cc80       0x11 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
+                0x1001cc00       0x11 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/pbuf.c.obj
  .rodata.raw_input.str1.4
-                0x1001cc80       0x49 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/raw.c.obj
+                0x1001cc00       0x49 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/raw.c.obj
  .rodata.tcp_close_shutdown_fin.str1.4
-                0x1001cc80        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_free.str1.4
-                0x1001cc80       0x11 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00       0x11 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_update_rcv_ann_wnd.str1.4
-                0x1001cc80       0x3e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00       0x3e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_recved.str1.4
-                0x1001cc80       0x26 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00       0x26 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_slowtmr.str1.4
-                0x1001cc80      0x1c6 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00      0x1c6 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_seg_copy.str1.4
-                0x1001cc80       0x1a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00       0x1a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_recv.str1.4
-                0x1001cc80       0x27 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00       0x27 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_pcb_remove.str1.4
-                0x1001cc80       0x87 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00       0x87 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_abandon.str1.4
-                0x1001cc80       0x31 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00       0x31 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_accept_null.str1.4
-                0x1001cc80       0x1d CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00       0x1d CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_close_shutdown.str1.4
-                0x1001cc80       0x55 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00       0x55 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_next_iss.str1.4
-                0x1001cc80       0x1a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00       0x1a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_eff_send_mss_netif.str1.4
-                0x1001cc80       0x27 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00       0x27 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_pcb_lists
-                0x1001cc80       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
-                0x1001cc80                tcp_pcb_lists
+                0x1001cc00       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc00                tcp_pcb_lists
  .rodata.tcp_persist_backoff
-                0x1001cc90        0x7 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
- *fill*         0x1001cc97        0x1 
+                0x1001cc10        0x7 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+ *fill*         0x1001cc17        0x1 
  .rodata.tcp_backoff
-                0x1001cc98        0xd CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
+                0x1001cc18        0xd CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp.c.obj
  .rodata.tcp_parseopt.str1.4
-                0x1001cca5       0x1a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_in.c.obj
+                0x1001cc25       0x1a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_in.c.obj
  .rodata.tcp_oos_insert_segment.str1.4
-                0x1001cca5       0x25 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_in.c.obj
+                0x1001cc25       0x25 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_in.c.obj
  .rodata.tcp_free_acked_segments.isra.0.str1.4
-                0x1001cca5       0x48 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_in.c.obj
+                0x1001cc25       0x48 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_in.c.obj
  .rodata.tcp_receive.str1.4
-                0x1001cca5      0x104 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_in.c.obj
+                0x1001cc25      0x104 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_in.c.obj
  .rodata.tcp_input.str1.4
-                0x1001cca5      0x1de CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_in.c.obj
- *fill*         0x1001cca5        0x3 
+                0x1001cc25      0x1de CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_in.c.obj
+ *fill*         0x1001cc25        0x3 
  .rodata.tcp_input
-                0x1001cca8       0x28 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_in.c.obj
+                0x1001cc28       0x28 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_in.c.obj
  .rodata.tcp_create_segment.str1.4
-                0x1001ccd0       0x59 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x59 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_output_fill_options.part.0.str1.4
-                0x1001ccd0       0x13 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x13 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_output_control_segment.str1.4
-                0x1001ccd0       0x29 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x29 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_output_alloc_header.constprop.0.str1.4
-                0x1001ccd0       0x56 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x56 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_write.str1.4
-                0x1001ccd0      0x1ea CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50      0x1ea CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_split_unsent_seg.str1.4
-                0x1001ccd0       0x55 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x55 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_send_fin.str1.4
-                0x1001ccd0       0x88 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x88 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_enqueue_flags.str1.4
-                0x1001ccd0       0xb1 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0xb1 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_rexmit_rto_prepare.str1.4
-                0x1001ccd0       0x24 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x24 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_rexmit.str1.4
-                0x1001ccd0       0x18 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x18 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_rexmit_fast.str1.4
-                0x1001ccd0       0x1d CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x1d CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_rst.str1.4
-                0x1001ccd0       0x37 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x37 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_send_empty_ack.str1.4
-                0x1001ccd0       0x20 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x20 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_output.str1.4
-                0x1001ccd0       0x57 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x57 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_rexmit_rto_commit.str1.4
-                0x1001ccd0       0x23 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x23 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_rexmit_rto.str1.4
-                0x1001ccd0       0x1c CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x1c CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_keepalive.str1.4
-                0x1001ccd0       0x1b CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x1b CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcp_zero_window_probe.str1.4
-                0x1001ccd0       0x23 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
+                0x1001cc50       0x23 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/tcp_out.c.obj
  .rodata.tcpip_tcp_timer.str1.4
-                0x1001ccd0       0x3d CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/timeouts.c.obj
+                0x1001cc50       0x3d CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/timeouts.c.obj
  .rodata.sys_timeouts_init.str1.4
-                0x1001ccd0       0x36 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/timeouts.c.obj
+                0x1001cc50       0x36 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/timeouts.c.obj
  .rodata.lwip_cyclic_timers
-                0x1001ccd0       0x38 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/timeouts.c.obj
-                0x1001ccd0                lwip_cyclic_timers
+                0x1001cc50       0x38 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/timeouts.c.obj
+                0x1001cc50                lwip_cyclic_timers
  .rodata.udp_input.str1.4
-                0x1001cd08       0x4e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/udp.c.obj
+                0x1001cc88       0x4e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/udp.c.obj
  .rodata.udp_sendto_if_src.str1.4
-                0x1001cd08       0x2e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/udp.c.obj
+                0x1001cc88       0x2e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/udp.c.obj
  .rodata.dhcp_create_msg.str1.4
-                0x1001cd08       0x40 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
+                0x1001cc88       0x40 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
  .rodata.dhcp_inc_pcb_refcount.str1.4
-                0x1001cd08       0x25 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
+                0x1001cc88       0x25 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
  .rodata.dhcp_option_hostname.isra.0.str1.4
-                0x1001cd08       0x95 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
+                0x1001cc88       0x95 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
  .rodata.dhcp_recv
-                0x1001cd08      0x1e0 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
+                0x1001cc88      0x1e0 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
  .rodata.dhcp_conflict_callback.str1.4
-                0x1001cee8       0x35 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
+                0x1001ce68       0x35 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
  .rodata.dhcp_set_struct.str1.4
-                0x1001cee8       0x44 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
+                0x1001ce68       0x44 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
  .rodata.dhcp_inform.str1.4
-                0x1001cee8       0x24 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
+                0x1001ce68       0x24 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
  .rodata.dhcp_network_changed_link_up.str1.4
-                0x1001cee8       0x14 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
+                0x1001ce68       0x14 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/dhcp.c.obj
  .rodata.etharp_find_entry.str1.4
-                0x1001cee8       0x41 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
+                0x1001ce68       0x41 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
  .rodata.etharp_raw.str1.4
-                0x1001cee8       0x85 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
+                0x1001ce68       0x85 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
  .rodata.etharp_output_to_arp_index.str1.4
-                0x1001cee8       0x30 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
+                0x1001ce68       0x30 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
  .rodata.etharp_get_entry.str1.4
-                0x1001cee8       0x20 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
+                0x1001ce68       0x20 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
  .rodata.etharp_input.str1.4
-                0x1001cee8       0x24 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
+                0x1001ce68       0x24 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
  .rodata.etharp_query.str1.4
-                0x1001cee8       0x2a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
+                0x1001ce68       0x2a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
  .rodata.etharp_output.str1.4
-                0x1001cee8        0xa CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
+                0x1001ce68        0xa CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/etharp.c.obj
  .rodata.icmp_input.str1.4
-                0x1001cee8       0x65 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/icmp.c.obj
+                0x1001ce68       0x65 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/icmp.c.obj
  .rodata.icmp_dest_unreach.str1.4
-                0x1001cee8       0x2c CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/icmp.c.obj
+                0x1001ce68       0x2c CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/icmp.c.obj
  .rodata.ipfrag_free_pbuf_custom.str1.4
-                0x1001cee8        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4_frag.c.obj
+                0x1001ce68        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4_frag.c.obj
  .rodata.ip_reass_free_complete_datagram.str1.4
-                0x1001cee8       0x7e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4_frag.c.obj
+                0x1001ce68       0x7e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4_frag.c.obj
  .rodata.ip4_reass.str1.4
-                0x1001cee8       0x70 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4_frag.c.obj
+                0x1001ce68       0x70 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4_frag.c.obj
  .rodata.ip4_frag.str1.4
-                0x1001cee8       0x2f CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4_frag.c.obj
+                0x1001ce68       0x2f CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4_frag.c.obj
  .rodata.ip4_output_if.str1.4
-                0x1001cee8       0x39 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4.c.obj
+                0x1001ce68       0x39 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4.c.obj
  .rodata.ip_addr_broadcast
-                0x1001cee8        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4_addr.c.obj
-                0x1001cee8                ip_addr_broadcast
+                0x1001ce68        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4_addr.c.obj
+                0x1001ce68                ip_addr_broadcast
  .rodata.ip_addr_any
-                0x1001ceec        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4_addr.c.obj
-                0x1001ceec                ip_addr_any
+                0x1001ce6c        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/ip4_addr.c.obj
+                0x1001ce6c                ip_addr_any
  .rodata.acd_add.str1.4
-                0x1001cef0       0x1e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/acd.c.obj
+                0x1001ce70       0x1e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/acd.c.obj
  .rodata.acd_remove.str1.4
-                0x1001cef0       0x1f CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/acd.c.obj
+                0x1001ce70       0x1f CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/core/ipv4/acd.c.obj
  .rodata.ethernet_output.str1.4
-                0x1001cef0       0x31 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/netif/ethernet.c.obj
+                0x1001ce70       0x31 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/netif/ethernet.c.obj
  .rodata.ethzero
-                0x1001cef0        0x6 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/netif/ethernet.c.obj
-                0x1001cef0                ethzero
- *fill*         0x1001cef6        0x2 
+                0x1001ce70        0x6 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/netif/ethernet.c.obj
+                0x1001ce70                ethzero
+ *fill*         0x1001ce76        0x2 
  .rodata.ethbroadcast
-                0x1001cef8        0x6 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/netif/ethernet.c.obj
-                0x1001cef8                ethbroadcast
+                0x1001ce78        0x6 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/lwip/src/netif/ethernet.c.obj
+                0x1001ce78                ethbroadcast
  .rodata.cyw43_read_bytes.str1.4
-                0x1001cefe       0x1a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
+                0x1001ce7e       0x1a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
  .rodata.cyw43_write_bytes.str1.4
-                0x1001cefe        0xd CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
- *fill*         0x1001cefe        0x2 
+                0x1001ce7e        0xd CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
+ *fill*         0x1001ce7e        0x2 
  .rodata.spi_gap01_sample0_program
-                0x1001cf00        0x6 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
- *fill*         0x1001cf06        0x2 
+                0x1001ce80        0x6 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
+ *fill*         0x1001ce86        0x2 
  .rodata.spi_gap01_sample0_program_instructions
-                0x1001cf08        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
+                0x1001ce88        0xc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
  .rodata.cyw43_kso_set.str1.4
-                0x1001cf14       0x23 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1001ce94       0x23 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_ll_sdpcm_poll_device.str1.4
-                0x1001cf14       0x55 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1001ce94       0x55 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_sdpcm_send_common.str1.4
-                0x1001cf14       0x22 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1001ce94       0x22 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_do_ioctl.str1.4
-                0x1001cf14       0x53 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1001ce94       0x53 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.reset_device_core.constprop.0.str1.4
-                0x1001cf14       0x1a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1001ce94       0x1a CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_ll_bus_init.str1.4
-                0x1001cf14       0xfe CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1001ce94       0xfe CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_ll_wifi_on.str1.4
-                0x1001cf14       0x3e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1001ce94       0x3e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_ll_wifi_pm.str1.4
-                0x1001cf14       0x35 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1001ce94       0x35 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_ll_wifi_join.str1.4
-                0x1001cf14       0x41 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1001ce94       0x41 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_ll_wifi_ap_init.str1.4
-                0x1001cf14       0x31 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1001ce94       0x31 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_ll_wifi_ap_set_up.str1.4
-                0x1001cf14        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1001ce94        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.w43439A0_7_95_49_00_combined
-                0x1001cf14    0x36fd8 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1001ce94    0x36fd8 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.wifi_nvram_4343
-                0x10053eec      0x2e7 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
- *fill*         0x100541d3        0x1 
- .rodata        0x100541d4       0x72 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x10053e6c      0x2e7 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
+ *fill*         0x10054153        0x1 
+ .rodata        0x10054154       0x72 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_netif_output.str1.4
-                0x10054246       0x22 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_lwip.c.obj
+                0x100541c6       0x22 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_lwip.c.obj
  .rodata.cyw43_cb_tcpip_init.str1.4
-                0x10054246        0x6 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_lwip.c.obj
+                0x100541c6        0x6 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_lwip.c.obj
  .rodata.cyw43_cb_process_async_event.str1.4
-                0x10054246       0x28 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ctrl.c.obj
- *fill*         0x10054246        0x2 
+                0x100541c6       0x28 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ctrl.c.obj
+ *fill*         0x100541c6        0x2 
  .rodata.cyw43_cb_process_async_event
-                0x10054248       0xbc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ctrl.c.obj
+                0x100541c8       0xbc CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ctrl.c.obj
  .rodata.str1.4
-                0x10054304       0x9e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ctrl.c.obj
+                0x10054284       0x9e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ctrl.c.obj
  .rodata.cyw43_async_event_name_table
-                0x10054304      0x164 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ctrl.c.obj
+                0x10054284      0x164 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/lib/cyw43-driver/src/cyw43_ctrl.c.obj
  .rodata.pio_claim_unused_sm.str1.4
-                0x10054468       0x24 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.obj
+                0x100543e8       0x24 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.obj
  .rodata.pio_add_program.str1.4
-                0x10054468       0x11 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.obj
+                0x100543e8       0x11 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.obj
  .rodata.dma_claim_unused_channel.str1.4
-                0x10054468       0x1e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.obj
+                0x100543e8       0x1e CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.obj
  .rodata.async_context_threadsafe_background_lock_check.str1.4
-                0x10054468       0x20 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj
+                0x100543e8       0x20 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj
  .rodata.template
-                0x10054468       0x38 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj
+                0x100543e8       0x38 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj
  .rodata.uxTopUsedPriority
-                0x100544a0        0x4 CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/tasks.c.obj
-                0x100544a0                uxTopUsedPriority
+                0x10054420        0x4 CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/tasks.c.obj
+                0x10054420                uxTopUsedPriority
  .rodata.prvTimerTask
-                0x100544a4       0x28 CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/timers.c.obj
+                0x10054424       0x28 CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/timers.c.obj
  .rodata.xTimerCreateTimerTask.str1.4
-                0x100544cc       0x10 CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/timers.c.obj
-                0x100544dc                        . = ALIGN (0x4)
+                0x1005444c       0x10 CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/timers.c.obj
+                0x1005445c                        . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x100544dc                        . = ALIGN (0x4)
+                0x1005445c                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x100544cc                        __exidx_start = .
+                0x1005444c                        __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x100544cc                        __exidx_end = .
-                0x100544dc                        . = ALIGN (0x4)
-                0x100544cc                        __binary_info_start = .
+                0x1005444c                        __exidx_end = .
+                0x1005445c                        . = ALIGN (0x4)
+                0x1005444c                        __binary_info_start = .
 
-.binary_info    0x100544cc       0x20
+.binary_info    0x1005444c       0x20
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr81
-                0x100544cc        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1005444c        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x100544d0        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10054450        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x100544d4        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10054454        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x100544d8        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10054458        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x100544dc        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1005445c        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x100544e0        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10054460        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr22
-                0x100544e4        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10054464        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr182
-                0x100544e8        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x100544ec                        __binary_info_end = .
+                0x10054468        0x4 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x1005446c                        __binary_info_end = .
 
-.rel.dyn        0x100544ec        0x0
- .rel.iplt      0x100544ec        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x100544ec                        . = ALIGN (0x4)
+.rel.dyn        0x1005446c        0x0
+ .rel.iplt      0x1005446c        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x1005446c                        . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -4815,7 +4810,7 @@ LOAD /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13
                 0x20000000       0xc0 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0     0x15bc load address 0x100544ec
+.data           0x200000c0     0x15bc load address 0x1005446c
                 0x200000c0                        __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -5007,20 +5002,20 @@ LOAD /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13
  *(.jcr)
                 0x2000167c                        . = ALIGN (0x4)
                 0x2000167c                        __data_end__ = .
-                0x100544ec                        __etext = LOADADDR (.data)
+                0x1005446c                        __etext = LOADADDR (.data)
 
 .tm_clone_table
-                0x2000167c        0x0 load address 0x10055aa8
+                0x2000167c        0x0 load address 0x10055a28
  .tm_clone_table
                 0x2000167c        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x2000167c        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x2000167c        0x0 load address 0x10055aa8
+.igot.plt       0x2000167c        0x0 load address 0x10055a28
  .igot.plt      0x2000167c        0x0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x20001680       0x20 load address 0x10055aa8
+                0x20001680       0x20 load address 0x10055a28
                 0x20001680                        . = ALIGN (0x4)
  *(.uninitialized_data*)
  .uninitialized_data.rosc_samples
@@ -5030,19 +5025,19 @@ LOAD /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13
  .uninitialized_data.rng_state
                 0x20001690       0x10 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_rand/rand.c.obj
 
-.scratch_x      0x20040000        0x0 load address 0x10055aa8
+.scratch_x      0x20040000        0x0 load address 0x10055a28
                 0x20040000                        __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                        . = ALIGN (0x4)
                 0x20040000                        __scratch_x_end__ = .
-                0x10055aa8                        __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10055a28                        __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10055aa8
+.scratch_y      0x20041000        0x0 load address 0x10055a28
                 0x20041000                        __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                        . = ALIGN (0x4)
                 0x20041000                        __scratch_y_end__ = .
-                0x10055aa8                        __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10055a28                        __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x200016a0    0x26400
                 0x200016a0                        . = ALIGN (0x4)
@@ -5498,8 +5493,8 @@ LOAD /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/joystick.dir/home/emileny/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10055aa8        0x0
-                0x10055aa8                        PROVIDE (__flash_binary_end = .)
+.flash_end      0x10055a28        0x0
+                0x10055a28                        PROVIDE (__flash_binary_end = .)
                 0x20040000                        __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                        __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                        __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -5694,7 +5689,7 @@ LOAD CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/str
 LOAD CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/tasks.c.obj
 LOAD CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/timers.c.obj
 LOAD CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-LOAD /tmp/ccA52Gue.o
+LOAD /tmp/ccPY9FxL.o
 LOAD /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -5910,7 +5905,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x00001044       0x2c CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .ARM.attributes
-                0x00001070       0x22 /tmp/ccA52Gue.o
+                0x00001070       0x22 /tmp/ccPY9FxL.o
  .ARM.attributes
                 0x00001092       0x1e /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
@@ -5926,31 +5921,29 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000118c       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sysconf.o)
  .ARM.attributes
-                0x000011b8       0x1b /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strcmp.o)
+                0x000011b8       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mlock.o)
  .ARM.attributes
-                0x000011d3       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mlock.o)
+                0x000011e4       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-calloc.o)
  .ARM.attributes
-                0x000011ff       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-calloc.o)
+                0x00001210       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-callocr.o)
  .ARM.attributes
-                0x0000122b       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-callocr.o)
+                0x0000123c       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-impure.o)
  .ARM.attributes
-                0x00001257       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-impure.o)
+                0x00001268       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-findfp.o)
  .ARM.attributes
-                0x00001283       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-findfp.o)
+                0x00001294       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strlen-stub.o)
  .ARM.attributes
-                0x000012af       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strlen-stub.o)
+                0x000012c0       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-freer.o)
  .ARM.attributes
-                0x000012db       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-freer.o)
+                0x000012ec       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o)
  .ARM.attributes
-                0x00001307       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o)
+                0x00001318       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-errno.o)
  .ARM.attributes
-                0x00001333       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-errno.o)
+                0x00001344       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
  .ARM.attributes
-                0x0000135f       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
+                0x00001370       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-reent.o)
  .ARM.attributes
-                0x0000138b       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-reent.o)
- .ARM.attributes
-                0x000013b7       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtend.o
+                0x0000139c       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtend.o
 
 .comment        0x00000000       0x44
  .comment       0x00000000       0x44 CMakeFiles/joystick.dir/joystick.c.obj
@@ -6043,28 +6036,24 @@ LOAD linker stubs
  .comment       0x00000044       0x45 CMakeFiles/joystick.dir/home/emileny/FreeRTOSv202212.01/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
 
 .debug_line_str
-                0x00000000      0x19a
+                0x00000000       0xc2
  .debug_line_str
-                0x00000000      0x19a /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
-                                 0xc2 (size before relaxing)
- .debug_line_str
-                0x0000019a       0xd8 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strcmp.o)
+                0x00000000       0xc2 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
 
-.debug_frame    0x00000000      0x4c4
+.debug_frame    0x00000000      0x4a4
  .debug_frame   0x00000000       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strncmp.o)
  .debug_frame   0x0000002c       0x40 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-malloc.o)
  .debug_frame   0x0000006c       0x3c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mallocr.o)
  .debug_frame   0x000000a8       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-memcmp.o)
  .debug_frame   0x000000d4       0x30 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-memmove.o)
  .debug_frame   0x00000104       0x28 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sysconf.o)
- .debug_frame   0x0000012c       0x20 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strcmp.o)
- .debug_frame   0x0000014c       0x40 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mlock.o)
- .debug_frame   0x0000018c       0x28 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-calloc.o)
- .debug_frame   0x000001b4       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-callocr.o)
- .debug_frame   0x000001e0      0x138 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-findfp.o)
- .debug_frame   0x00000318       0x28 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strlen-stub.o)
- .debug_frame   0x00000340       0x5c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-freer.o)
- .debug_frame   0x0000039c       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o)
- .debug_frame   0x000003c8       0x20 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-errno.o)
- .debug_frame   0x000003e8       0xb0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
- .debug_frame   0x00000498       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-reent.o)
+ .debug_frame   0x0000012c       0x40 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-mlock.o)
+ .debug_frame   0x0000016c       0x28 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-calloc.o)
+ .debug_frame   0x00000194       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-callocr.o)
+ .debug_frame   0x000001c0      0x138 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-findfp.o)
+ .debug_frame   0x000002f8       0x28 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-strlen-stub.o)
+ .debug_frame   0x00000320       0x5c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-freer.o)
+ .debug_frame   0x0000037c       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o)
+ .debug_frame   0x000003a8       0x20 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-errno.o)
+ .debug_frame   0x000003c8       0xb0 /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lock.o)
+ .debug_frame   0x00000478       0x2c /home/emileny/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-reent.o)
