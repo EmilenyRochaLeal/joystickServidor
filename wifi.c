@@ -21,75 +21,148 @@ extern QueueHandle_t xJoystickQueue;
 
 // HTML da página principal (com JavaScript dinâmico)
 static const char *pagina_html =
-        "HTTP/1.1 200 OK\r\n"
-        "Content-Type: text/html\r\n\r\n"
-        "<!DOCTYPE html><html><head><title>Joystick</title>"
-        "<script>"
-        "async function atualizarDados() {"
-        "try {"
-        "const res = await fetch('/dados');"
-        "const json = await res.json();"
-        "document.getElementById('x').textContent = json.x;"
-        "document.getElementById('y').textContent = json.y;"
-        "document.getElementById('botao').textContent = json.botao;"
-        "document.getElementById('direcao').textContent = json.direcao;"
-        "} catch (e) { console.log('Erro:', e); }"
-        "}"
-        "setInterval(atualizarDados, 1000);"
-        "</script></head><body>"
-        "<h1>Joystick</h1>"
-        "<p>X: <span id='x'>-</span></p>"
-        "<p>Y: <span id='y'>-</span></p>"
-        "<p>Botão: <span id='botao'>-</span></p>"
-        "<p>Direção: <span id='direcao'>-</span></p>"
-        "</body></html>";
+    "<!DOCTYPE html>"
+    "<html lang='pt-BR'>"
+    "<head>"
+    "<meta charset='UTF-8'>"
+    "<meta name='viewport' content='width=device-width, initial-scale=1.0'>"
+    "<title>Joystick</title>"
+    "<style>"
+    "body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 20px; }"
+    "h1 { color: #333; }"
+    "p span { font-weight: bold; }"
+    "</style>"
+    "<script>"
+    "console.log('HTML carregado');"
+    "async function atualizarDados() {"
+    "  try {"
+    "    const res = await fetch('/dados');"
+    "    const json = await res.json();"
+    "    console.log('Recebido:', json);"
+    "    document.getElementById('x').textContent = json.x;"
+    "    document.getElementById('y').textContent = json.y;"
+    "    document.getElementById('botao').textContent = json.botao;"
+    "    document.getElementById('direcao').textContent = json.direcao;"
+    "  } catch (e) {"
+    "    console.error('Erro ao obter dados:', e);"
+    "  }"
+    "}"
+    "setInterval(atualizarDados, 1000);"
+    "</script>"
+    "</head>"
+    "<body>"
+    "<h1>Leitura do Joystick</h1>"
+    "<p>X: <span id='x'>-</span></p>"
+    "<p>Y: <span id='y'>-</span></p>"
+    "<p>Botão: <span id='botao'>-</span></p>"
+    "<p>Direção: <span id='direcao'>-</span></p>"
+    "</body>"
+    "</html>";
 
+
+        static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err) {
+            if (!p) {
+                tcp_close(tpcb);
+                tcp_recv(tpcb, NULL);
+                return ERR_OK;
+            }
+        
+            char *request = (char *)malloc(p->len + 1);
+            memcpy(request, p->payload, p->len);
+            request[p->len] = '\0';
+        
+            printf("Request: %s\n", request);
+        
+            JoystickData dados_joystick;
+            bool tem_dados = xQueuePeek(xJoystickQueue, &dados_joystick, 0);
+        
+            if (strncmp(request, "GET /dados", 10) == 0) {
+                char json[256];
+                int json_len = snprintf(json, sizeof(json),
+                    "{\"x\": %d, \"y\": %d, \"botao\": \"%s\", \"direcao\": \"%s\"}",
+                    tem_dados ? dados_joystick.x : -1,
+                    tem_dados ? dados_joystick.y : -1,
+                    tem_dados ? (dados_joystick.button ? "Pressionado" : "Solto") : "Desconhecido",
+                    tem_dados ? dados_joystick.direcao : "Sem dados"
+                );
+        
+                char resposta[512];
+                snprintf(resposta, sizeof(resposta),
+                    "HTTP/1.1 200 OK\r\n"
+                    "Content-Type: application/json\r\n"
+                    "Content-Length: %d\r\n"
+                    "Connection: close\r\n"
+                    "\r\n"
+                    "%s", json_len, json);
+        
+                tcp_write(tpcb, resposta, strlen(resposta), TCP_WRITE_FLAG_COPY);
+            } else {
+                char resposta[1024];
+                int html_len = strlen(pagina_html);
+                snprintf(resposta, sizeof(resposta),
+                    "HTTP/1.1 200 OK\r\n"
+                    "Content-Type: text/html; charset=UTF-8\r\n"
+                    "Content-Length: %d\r\n"
+                    "Connection: close\r\n"
+                    "\r\n", html_len);
+            
+                tcp_write(tpcb, resposta, strlen(resposta), TCP_WRITE_FLAG_COPY);
+                tcp_write(tpcb, pagina_html, html_len, TCP_WRITE_FLAG_COPY);
+            }
+        
+            tcp_output(tpcb);
+            tcp_close(tpcb);  // Encerra a conexão corretamente
+            free(request);
+            pbuf_free(p);
+            return ERR_OK;
+        }
+        
 // Callback de recebimento HTTP
-static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err) {
-    if (!p) {
-        tcp_close(tpcb);
-        tcp_recv(tpcb, NULL);
-        return ERR_OK;
-    }
+// static err_t tcp_server_recv(void *arg, struct tcp_pcb *tpcb, struct pbuf *p, err_t err) {
+//     if (!p) {
+//         tcp_close(tpcb);
+//         tcp_recv(tpcb, NULL);
+//         return ERR_OK;
+//     }
 
-    char *request = (char *)malloc(p->len + 1);
-    memcpy(request, p->payload, p->len);
-    request[p->len] = '\0';
+//     char *request = (char *)malloc(p->len + 1);
+//     memcpy(request, p->payload, p->len);
+//     request[p->len] = '\0';
 
-    printf("Request: %s\n", request);
+//     printf("Request: %s\n", request);
 
-    JoystickData dados_joystick;
-    bool tem_dados = xQueuePeek(xJoystickQueue, &dados_joystick, 0);  // Lê sem remover
+//     JoystickData dados_joystick;
+//     bool tem_dados = xQueuePeek(xJoystickQueue, &dados_joystick, 0);  // Lê sem remover
 
-    if (strncmp(request, "GET /dados", 10) == 0) {
-        // Responder com JSON
-        char resposta[256];
-        snprintf(resposta, sizeof(resposta),
-            "HTTP/1.1 200 OK\r\n"
-            "Content-Type: application/json\r\n\r\n"
-            "{\"x\": %d, \"y\": %d, \"botao\": \"%s\", \"direcao\": \"%s\"}",
-            tem_dados ? dados_joystick.x : -1,
-            tem_dados ? dados_joystick.y : -1,
-            tem_dados ? (dados_joystick.button ? "Pressionado" : "Solto") : "Desconhecido",
-            tem_dados ? dados_joystick.direcao : "Sem dados"
-        );
-        tcp_write(tpcb, resposta, strlen(resposta), TCP_WRITE_FLAG_COPY);
-    } else {
-        // Responder com a página HTML
-        tcp_write(tpcb, pagina_html, strlen(pagina_html), TCP_WRITE_FLAG_COPY);
-    }
+//     if (strncmp(request, "GET /dados", 10) == 0) {
+//         // Responder com JSON
+//         char resposta[256];
+//         snprintf(resposta, sizeof(resposta),
+//             "HTTP/1.1 200 OK\r\n"
+//             "Content-Type: application/json\r\n\r\n"
+//             "{\"x\": %d, \"y\": %d, \"botao\": \"%s\", \"direcao\": \"%s\"}",
+//             tem_dados ? dados_joystick.x : -1,
+//             tem_dados ? dados_joystick.y : -1,
+//             tem_dados ? (dados_joystick.button ? "Pressionado" : "Solto") : "Desconhecido",
+//             tem_dados ? dados_joystick.direcao : "Sem dados"
+//         );
+//         tcp_write(tpcb, resposta, strlen(resposta), TCP_WRITE_FLAG_COPY);
+//     } else {
+//         // Responder com a página HTML
+//         tcp_write(tpcb, pagina_html, strlen(pagina_html), TCP_WRITE_FLAG_COPY);
+//     }
     
 
     
 
-    // Envia para o cliente
-    tcp_output(tpcb);
+//     // Envia para o cliente
+//     tcp_output(tpcb);
 
-    // libera a memória
-    free(request);
-    pbuf_free(p);
-    return ERR_OK;
-}
+//     // libera a memória
+//     free(request);
+//     pbuf_free(p);
+//     return ERR_OK;
+// }
 
 // Callback de aceitação
 static err_t tcp_server_accept(void *arg, struct tcp_pcb *newpcb, err_t err) {
