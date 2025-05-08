@@ -3,13 +3,16 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "joystick.h"
-#include "wifi.h"
 #include "queue.h" 
+
+#include "utils/send-data-to-server/send-data.h"
+#include "utils/wifi-connection/wifi-connection.h"
 
 QueueHandle_t xJoystickQueue;
 
 int main() {
     stdio_init_all();
+    init_wifi();
     sleep_ms(3000);
 
     // Criação das tarefas
@@ -18,11 +21,6 @@ int main() {
     xJoystickQueue = xQueueCreate(1, sizeof(JoystickData));  // Apenas 1 item (o mais recente)
     if (xJoystickQueue == NULL) {
         printf("Erro ao criar fila do joystick!\n");
-    }
-
-    BaseType_t result = xTaskCreate(wifi_task, "WiFiTask", 4096, NULL, 2, NULL);
-    if (result != pdPASS) {
-        printf("[Main] Falha ao criar a wifi_task! Código: %ld\n", result);
     }
          
     xTaskCreate(joystick_task, "JoystickTask", 256, NULL, 1, NULL);
@@ -34,4 +32,11 @@ int main() {
     return 0;
 }
 
+// int x = getJoystickX();
+//     int y = getJoystickY();
+//     bool botao = le_botao();
+
+//     create_request(x, y, botao);
+
+//     sleep_ms(1000);
 

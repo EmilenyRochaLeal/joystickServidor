@@ -9,6 +9,8 @@
 #include "joystick.h"
 #include "queue.h" 
 
+#include "utils/send-data-to-server/send-data.h"
+
 #define vRx_PIN 26   // Pino ligado ao eixo X (ADC0)
 #define vRy_PIN 27  // Pino ligado ao eixo Y (ADC1)
 #define SW 22      // Pino do botão (Digital)
@@ -77,6 +79,8 @@ void joystick_task(void *params) {
 
         // Envia para a fila (substitui valor anterior)
         xQueueOverwrite(xJoystickQueue, &data);
+
+        // create_request(data.x, data.y, data.button,  data.direcao);
 
         vTaskDelay(pdMS_TO_TICKS(300));
     }

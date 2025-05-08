@@ -29,7 +29,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 add_executable(joystick
    joystick.c
    main.c
-   wifi.c
+   utils/send-data-to-server/send-data.c
+   utils/wifi-connection/wifi-connection.c
 )
 
 target_include_directories(joystick PRIVATE
@@ -55,6 +56,9 @@ target_include_directories(joystick PRIVATE
     ${PICO_SDK_PATH}/lib/pico_cyw43_driver/include
     ${PICO_SDK_PATH}/lib/pico_cyw43_arch/include
     ${PICO_SDK_PATH}/lib/pico_lwip/include
+    utils/html-renderer
+    utils/send-data-to-server
+    utils/wifi-connection
 )
 
 

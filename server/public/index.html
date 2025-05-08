@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Joystick</title>
+</head>
+<body>
+  <h1>Joystick</h1>
+  <p>X: <span id="x">-</span></p>
+  <p>Y: <span id="y">-</span></p>
+  <p>Botão: <span id="botao">-</span></p>
+  <p>Direção: <span id="direcao">-</span></p>
+
+  <script>
+    function limparDestaques() {
+      const direcoes = ['norte', 'leste', 'sul', 'oeste', 'nordeste', 'sudeste', 'sudoeste', 'noroeste'];
+      direcoes.forEach(dir => {
+        document.getElementById(dir).classList.remove('ativo');
+      });
+    }
+
+    async function atualizar() {
+      try {
+        const res = await fetch('/status');
+        const data = await res.json();
+
+        document.getElementById('x').textContent = data.x;
+        document.getElementById('y').textContent = data.y;
+        document.getElementById('botao').textContent = data.botao ? 'Pressionado' : 'Solto';
+        document.getElementById('direcao').textContent = data.direcao;
+
+        limparDestaques();
+        const id = data.direcao.toLowerCase();
+        if (document.getElementById(id)) {
+          document.getElementById(id).classList.add('ativo');
+        }
+      } catch (error) {
+        console.error('Erro ao buscar dados do joystick:', error);
+      }
+    }
+
+    setInterval(atualizar, 1000);
+  </script>
+</body>
+</html>
